@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GameMainSkin" width="480" height="600" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="resource/assets/bkg.png" x="0" y="0" height="600" width="482"/>
+	<e:Label y="5" strokeColor="0x000000" text="4399游戏" x="405" size="12" stroke="2" visible="false"/>
+	<e:Image source="resource/assets/title.png" x="69" y="23"/>
+	<e:Label y="60" strokeColor="0xFFFFFF" text="测你到底有多变态" stroke="3" bold="true" textColor="0x764A0A" size="32" x="102" width="270" height="39" textAlign="center"/>
+	<e:Group id="startGroup" height="600" width="480" x="0" y="0" visible="false">
+		<e:Image source="resource/assets/board.png" x="71" y="129"/>
+		<e:Image source="resource/assets/common_bghei.png" scale9Grid="10,10,37,37" x="181" y="309" width="212" height="51"/>
+		<e:Label x="90" textColor="0xFAFCFD" text="快来测一测，你的变态系数吧！" fontFamily="Adobe 宋体 Std L" bold="true" size="26" lineSpacing="4" y="175" strokeColor="0x000000" stroke="2" width="299" height="61" textAlign="left"/>
+		<e:Label x="108" textColor="0xFAFCFD" text="据说系数越大越变态！" fontFamily="Adobe 宋体 Std L" bold="true" size="18" lineSpacing="4" y="256" strokeColor="0x000000" stroke="2" width="277" height="24" textAlign="center"/>
+		<e:Label x="80" y="320" strokeColor="0x000000" height="38" text="姓名：" textAlign="right" width="112" size="32" stroke="2"/>
+		<e:Label x="80" y="385" strokeColor="0x000000" height="38" text="性别：" textAlign="right" width="112" size="32" stroke="2"/>
+		<e:EditableText y="321" height="33" text="请输入你的名字" x="192" width="192" size="26" id="nameTxt"/>
+		<e:Label x="327" y="387" strokeColor="0x000000" size="26" text="女" textAlign="center" width="36" height="31" stroke="2"/>
+		<e:Label x="237" y="389" strokeColor="0x000000" size="26" text="男" textAlign="center" width="36" height="31" stroke="2"/>
+		<e:RadioButton value="1" y="385" x="284" id="woman">
+			<e:skinName>
+				<e:Skin states="up,down,disabled" xmlns:w="http://ns.egret.com/wing">
+					<e:Image width="100%" height="100%" source="resource/assets/icon_circleempty.png" source.down="resource/assets/icon_circleslelected.png" source.disabled="resource/assets/icon_circleslelected.png"/>
+					<e:Label id="labelDisplay3" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:RadioButton>
+		<e:RadioButton value="0" y="385" x="198" selected="true" id="man">
+			<e:skinName>
+				<e:Skin states="up,down,disabled" xmlns:w="http://ns.egret.com/wing">
+					<e:Image width="100%" height="100%" source="resource/assets/icon_circleempty.png" source.down="resource/assets/icon_circleslelected.png" source.disabled="resource/assets/icon_circleslelected.png"/>
+					<e:Label id="labelDisplay4" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:RadioButton>
+		<e:Button id="start" y="469" x="165">
+			<e:skinName>
+				<e:Skin states="up,down,disabled" xmlns:w="http://ns.egret.com/wing">
+					<e:Image width="100%" height="100%" source="resource/assets/btnBkg.png" source.down="resource/assets/btnBkg.png" source.disabled="resource/assets/btnBkg.png"/>
+					<e:Label id="labelDisplay5" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label stroke="3" textColor="0x764A0A" text="开测GO" bold="true" size="30" x="175" y="506" strokeColor="0xFFFFFF" touchEnabled="false" textAlign="center" width="115"/>
+	</e:Group>
+	<e:Group id="gameGroup" height="600" width="480" x="0" y="0">
+		<e:Button id="Btn" x="170" y="495">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="resource/assets/btnBkg.png" source.down="resource/assets/btnBkg.png" source.disabled="resource/assets/btnBkg.png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label id="txt" y="532" strokeColor="0xffffff" text="下一题" x="180" size="30" stroke="3" touchEnabled="false" textColor="0x764A0A" bold="true" width="115" textAlign="center"/>
+		<e:Image source="resource/assets/board.png" x="42" y="158" height="356" width="394"/>
+		<e:Image source="resource/assets/btnBkg.png" x="177" y="104" width="116" height="65"/>
+		<e:Label id="progTxt" stroke="3" y="140" strokeColor="0xFFFFFF" size="18" text="进度：20/30" textAlign="center" bold="true" width="114" textColor="0x764A0A" height="16" x="176"/>
+		<e:Label id="titile" stroke="2" y="200" strokeColor="0" size="26" text="1.测出你内心小魔鬼" textAlign="left" width="331" height="97" x="71" textColor="0xFBF7F3" verticalAlign="top" lineSpacing="3"/>
+		<e:List id="list" height="187" width="347" x="65" y="301"/>
+	</e:Group>
+	<e:Group id="resultGroup" height="600" width="480" x="0" y="0" visible="false">
+		<e:Image source="resource/assets/common_bghei.png" scale9Grid="10,10,37,37" x="-4" y="0" width="484" height="600"/>
+		<e:Image source="resource/assets/result.png" x="32" y="56" height="493"/>
+		<e:Button id="moreBtn" y="486" x="100">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="resource/assets/btnBkg.png" source.down="resource/assets/btnBkg.png" source.disabled="resource/assets/btnBkg.png"/>
+					<e:Label id="labelDisplay2" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label stroke="3" textColor="0x764A0A" text="更多游戏" bold="true" size="30" x="108" y="526" strokeColor="0xFFFFFF" touchEnabled="false" textAlign="center" width="121" height="32"/>
+		<e:Button id="shareBtn" y="485" x="250">
+			<e:skinName>
+				<e:Skin states="up,down,disabled" xmlns:w="http://ns.egret.com/wing">
+					<e:Image width="100%" height="100%" source="resource/assets/btnBkg.png" source.down="resource/assets/btnBkg.png" source.disabled="resource/assets/btnBkg.png"/>
+					<e:Label id="labelDisplay0" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label stroke="3" textColor="0x764A0A" text="分享游戏" bold="true" size="30" x="258" y="524" strokeColor="0xFFFFFF" touchEnabled="false" textAlign="center" width="121" height="32"/>
+		<e:Label stroke="3" y="99" strokeColor="0xFFFFFF" size="32" text="测试结果" textAlign="center" bold="true" width="270" height="38" x="97" textColor="0xFF0000"/>
+		<e:Label id="scoreTxt" stroke="3" y="154" strokeColor="0xFFFFFF" size="32" text="变态系数：180" textAlign="center" bold="true" width="270" height="38" x="96" textColor="0x942121"/>
+		<e:Label id="resultTxt" x="95" y="202" strokeColor="000000" height="247" text="你的思考方式拥有两性的特质。你对男女都没有偏见,并在解决问题方面,反应会比较灵活,找出最佳的解决方法。不管男性或女性,你都可以成为他们的好友。" textAlign="left" width="284" size="24" stroke="2" textColor="0xCD7E18" lineSpacing="6" bold="true"/>
+		<e:Button id="submitBtn" x="366" y="33" width="94" height="38">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="resource/assets/submit.png" source.down="resource/assets/submit.png" source.disabled="resource/assets/submit.png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label stroke="3" textColor="0x764A0A" text="提交系数" bold="true" size="18" x="372" y="43" strokeColor="0xFFFFFF" touchEnabled="false" textAlign="center" width="83" height="19"/>
+		<e:Button id="rankListBtn" y="77" x="367" width="94" height="38">
+			<e:skinName>
+				<e:Skin states="up,down,disabled" xmlns:w="http://ns.egret.com/wing">
+					<e:Image width="100%" height="100%" source="resource/assets/submit.png" source.down="resource/assets/submit.png" source.disabled="resource/assets/submit.png"/>
+					<e:Label id="labelDisplay1" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label stroke="3" textColor="0x764A0A" text="排行榜" bold="true" size="18" x="373" y="87" strokeColor="0xFFFFFF" touchEnabled="false" textAlign="center" width="83" height="19"/>
+	</e:Group>
+	<e:Group id="rankGroup" y="0" width="480" height="600" x="0" visible="false">
+		<e:Image source="resource/assets/result.png" y="56" height="493" x="32"/>
+		<e:Label strokeColor="0xFFFFFF" y="99" stroke="3" size="32" text="排行榜" textAlign="center" bold="true" width="270" textColor="0xFF0000" height="38" x="97"/>
+		<e:Scroller id="myScroller" width="280" height="270" x="96" y="153">
+			<e:List id="rankList" x="150" y="159" width="240" height="260"/>
+			
+		</e:Scroller>
+		<e:Button id="closeBtn" x="359" y="81">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="resource/assets/close.png" source.down="resource/assets/close.png" source.disabled="resource/assets/close.png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Group y="0" id="shareGroup" width="480" height="600" x="0" visible="false">
+		<e:Image source="resource/assets/common_bghei.png" y="-1" scale9Grid="10,10,37,37" width="480" height="604" x="-1"/>
+		<e:Label x="97" y="113" strokeColor="0x000000" height="62" text="点击右上角，分享给小伙伴或者分享到朋友圈吧！" stroke="2" width="301" size="25" lineSpacing="4"/>
+		<e:Image source="resource/assets/Tes.png" y="36" x="352"/>
+	</e:Group>
+</e:Skin>
